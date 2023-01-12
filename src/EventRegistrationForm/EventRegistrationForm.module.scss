@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.title {
+  background-color: black;
+  margin: 0;
+  color: white;
+  width: 30rem;
+  padding: 0.5rem 3rem;
+  text-align: center;
+}
+
+.form {
+  width: 30rem;
+  background-color: white;
+  padding: 3rem;
+  align-self: center;
+  font-size: 1.3rem;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "input-label firstName firstName lastName"
+    "company-label company company company"
+    "email-label email email email"
+    "phone-label area phone phone"
+    "subject-label subject subject subject"
+    "checkmark checkmark . ."
+    "btn btn  . .";
+  gap: 1.25rem;
+  margin: 0 auto;
+
+  input,
+  select {
+    padding: 0.8rem 0rem;
+    border: 0;
+    background-color: rgb(221, 221, 221);
+    border-radius: 0.2rem;
+    text-indent: 1rem;
+  }
+
+  fieldset {
+    padding: 0.8rem 0rem;
+    border: 0;
+
+    label {
+      margin-right: 1rem;
+    }
+
+    input {
+      margin-right: 0.3rem;
+    }
+  }
+
+  &__nameLabel {
+    grid-area: input-label;
+    place-items: center center;
+  }
+
+  &__firstName {
+    grid-area: firstName;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 1rem;
+    color: rgb(152, 149, 149);
+  }
+
+  &__lastName {
+    grid-area: lastName;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 1rem;
+    color: rgb(152, 149, 149);
+  }
+
+  &__companyLabel {
+    grid-area: company-label;
+  }
+
+  &__companyLabel {
+    grid-area: company-label;
+  }
+
+  &__company {
+    grid-area: company;
+  }
+
+  &__emailLabel {
+    grid-area: email-label;
+  }
+
+  &__email {
+    grid-area: email;
+  }
+
+  &__phoneLabel {
+    grid-area: phone-label;
+  }
+
+  &__areaCode {
+    grid-area: area;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 1rem;
+    color: rgb(152, 149, 149);
+  }
+
+  &__number {
+    grid-area: phone;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 1rem;
+    color: rgb(152, 149, 149);
+  }
+
+  &__subjectLabel {
+    grid-area: subject-label;
+  }
+
+  &__subject {
+    grid-area: subject;
+  }
+
+  &__checkmark {
+    grid-area: checkmark;
+    margin-top: 1rem;
+  }
+
+  &__button {
+    grid-area: btn;
+    border: 0;
+    background-color: rgb(239, 91, 91);
+    color: white;
+    border-radius: 0.2rem;
+    width: fit-content;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(197, 64, 64);
+    }
+  }
+}
