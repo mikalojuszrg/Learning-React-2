@@ -31,7 +31,14 @@ const EventRegistrationForm = () => {
         isCustomer,
       },
     ]);
-    console.log(formData);
+    setFirstName("");
+    setLasttName("");
+    setCompany("");
+    setEmail("");
+    setAreaCode("");
+    setNumber("");
+    setSubject("");
+    setIsCustomer("yes");
   };
 
   return (
